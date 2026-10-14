@@ -1,0 +1,111 @@
+{
+    "commands": {
+        "weather": {
+            "help": "Set the weather: a type, auto or next",
+            "type": "Weather type, auto or next"
+        },
+        "weathers": { "help": "List the weather types and every region's weather" },
+        "blackout": {
+            "help": "Toggle a blackout everywhere, in one region, or for one player",
+            "target": "Region id, \"here\", a player id, or leave out for everywhere"
+        },
+        "weathersync": { "help": "Stop or start weather sync for a player", "state": "on or off" },
+        "weatherinfo": { "help": "Show the weather and temperature where a player is" },
+        "editor": { "help": "Open the weather region editor" },
+        "time": {
+            "help": "Ease the time of day to a new value",
+            "hour": "0-23",
+            "minute": "0-59",
+            "now": "Pass \"now\" to skip the transition"
+        },
+        "freezetime": { "help": "Toggle the day/night cycle" },
+        "infect": { "help": "Give a player a sickness", "severity": "1-100" },
+        "curesickness": { "help": "Clear a player's sickness", "immunity": "Seconds of immunity" },
+        "exposure": { "help": "Set a player's exposure", "value": "0-100" },
+        "dwpain": { "help": "Play one PLAY_PAIN voice line", "id": "eAudDamageReason, 19 is a cough" },
+        "dwcough": { "help": "Cough once, to test the animation", "anim": "Animation key from data/effects.lua" },
+        "dwshowcase": { "help": "Walk a player through every sickness stage", "sickness": "One of: %s. Leave out for all" },
+        "dwshowcasestop": { "help": "Stop a running showcase" },
+        "dwdebug": { "help": "Print a player's weather and sickness state to the console" },
+        "region": "Region id, \"here\", or leave out for everywhere",
+        "target": "Defaults to you"
+    },
+    "weather": {
+        "everywhere": "everywhere",
+        "in_region": "in %s",
+        "released": "Weather is back to normal %s.",
+        "advanced": "Weather moved on %s.",
+        "set": "%s %s.",
+        "unknown": "Unknown weather type. /weathers lists them.",
+        "listing": "%s: %s%s",
+        "held": " (held)",
+        "info": "%s · %s%s · %.1f°C (feels %.1f°C) · %d%% · %02d:%02d",
+        "sync": "Weather sync %s for %s.",
+        "on": "on",
+        "off": "off",
+        "region_changed": "%s, %d°C"
+    },
+    "blackout": {
+        "player": "Blackout %s for %s.",
+        "cut": "Power cut %s.",
+        "restored": "Power restored %s.",
+        "on": "Blackout on.",
+        "off": "Blackout off."
+    },
+    "time": {
+        "moving": "Time moving to %02d:%02d.",
+        "invalid": "Invalid time.",
+        "frozen": "Time frozen.",
+        "resumed": "Time resumed."
+    },
+    "regions": {
+        "unknown": "Unknown region. Try: here, %s",
+        "saved": "Saved %s.",
+        "deleted": "Deleted %s.",
+        "invalid": "That is not a region.",
+        "no_centre": "That circle has no centre.",
+        "corners": "A polygon needs between 3 and 64 corners.",
+        "unnamed": "Unnamed region"
+    },
+    "climates": {
+        "saved": "Saved %s.",
+        "deleted": "Climate deleted.",
+        "invalid": "That is not a climate.",
+        "unnamed": "Give the climate a name.",
+        "no_weather": "A climate needs at least one weather.",
+        "missing": "No such climate.",
+        "in_use": "Still used by %d region(s)."
+    },
+    "sickness": {
+        "infected": "Infected %s with %s.",
+        "cured": "Cured %s.",
+        "exposure": "Exposure for %s set to %d.",
+        "showcasing": "Showcasing %s for %s.",
+        "every_sickness": "every sickness",
+        "recovered": "Recovered",
+        "recovered_text": "You are feeling like yourself again.",
+        "coughing": "Coughing."
+    },
+    "showcase": {
+        "title": "Sickness showcase",
+        "step": "%d/%d  %s: %s",
+        "unknown": "Unknown sickness \"%s\".",
+        "complete": "Showcase complete.",
+        "stopped": "Showcase stopped."
+    },
+    "cures": {
+        "cooldown": "You need to wait before using another %s.",
+        "cured": "You are feeling much better.",
+        "better": "You are starting to feel better.",
+        "immunity": "You feel protected for a while.",
+        "wrong": "That won't help with how you're feeling.",
+        "treats": "Treats: %s",
+        "treats_all": "Treats: any illness"
+    },
+    "errors": {
+        "console_target": "Pass a player id from the console.",
+        "no_player": "No such player.",
+        "no_response": "No response from that player.",
+        "printed": "Printed to the server console."
+    }
+}

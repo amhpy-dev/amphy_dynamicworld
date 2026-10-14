@@ -1,0 +1,7 @@
+web/node_modules/
+web/dist/
+temp/
+*.zip
+.DS_Store
+Thumbs.db
+web/mapStyles/map.png
